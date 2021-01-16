@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
+  "scripts": {
+    "deploy": "parcel build src/index.html; wrangler publish"
+  },
   "devDependencies": {
     "cssnano": "^4.1.10",
     "sass": "^1.32.4",
