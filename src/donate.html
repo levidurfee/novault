@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NoVault Passwords</title>
+    <title>Donate - NoVault Passwords</title>
 
     <link rel="stylesheet" href="./main.scss">
     <script src="./app.js" defer></script>
@@ -26,28 +26,32 @@
         <header class="flex baseline space-between">
             <h1>NoVault Passwords</h1>
             <nav>
-                <a href="/" class="active">Home</a>
+                <a href="/">Home</a>
                 <a href="/about.html">About</a>
-                <a href="/donate.html">Donate</a>
+                <a href="/donate.html" class="active">Donate</a>
             </nav>
         </header>
     </div>
     <div class="container">
         <div class="app">
-            <label class="sr-only" for="password">Password</label>
-            <input class="rounded-top" type="password" id="password" placeholder="Password" autofocus="true" autocomplete="new-password" data-lpignore="true"
-            >
-            <label class="sr-only" for="resource">Resource/Realm</label>
-            <input type="text" id="resource" placeholder="Resource" data-lpignore="true"
-            >
-            <div class="flex">
-                <button id="submit">Generate</button>
-                <button id="reset">Reset</button>
+            <div class="description rounded">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>Litecoin</td>
+                            <td><code>MCkx2LDZEJ42DBTgAUHK7uyziVAGsTAk6S</code></td>
+                        </tr>
+                        <tr>
+                            <td>Bitcoin</td>
+                            <td><code>38uv9FmkiT1S2ko82mpkvGUDg2tGQkCk8P</code></td>
+                        </tr>
+                        <tr>
+                            <td>Eth</td>
+                            <td><code>0xe1e45A85389ef2c3B2E730D60828Fc41ddc7B277</code></td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
-            <label class="sr-only" for="output">Generated Password</label>
-            <input class="rounded-bottom" type="text" id="output" placeholder="" data-lpignore="true" readonly="true"
-            >
-            <div id="error" class="rounded hide"></div>
         </div>
     </div>
 </body>

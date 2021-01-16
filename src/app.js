@@ -1,7 +1,11 @@
 const seedrandom = require('seedrandom');
 
-const length = 16;
-const chars = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!_-";
+const length  = 16;
+const lower   = `abcdefghijklmnopqrstuvwxyz`;
+const upper   = `ABCDEFGHIJKLMNOPQRSTUVWXYZ`;
+const digits  = `1234567890`;
+const special = `~!@#$%^&*_-+=|\\(){}[]:;"'<>,.?/` + "`";
+const chars   = lower+upper+digits+special;
 
 let password = document.getElementById("password");
 let resource = document.getElementById("resource");
