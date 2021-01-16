@@ -71,5 +71,22 @@ button {
 }
 
 .hide { display:none; }
+.sr-only {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
 
 .flex { display:flex; }
+
+.description {
+    margin-top:20px; padding:20px; background: #444;
+    p {
+        margin:0;
+    }
+}
+p { font-size:18px; line-height:30px; }

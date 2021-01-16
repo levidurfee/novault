@@ -38,4 +38,6 @@ reset.onclick = function() {
     password.value = "";
     resource.value = "";
     output.value = "";
+
+    error.classList.add("hide");
 }
