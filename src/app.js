@@ -36,6 +36,8 @@ button.onclick = function() {
     }
 
     output.value = newpw;
+
+    password.type = "password";
 }
 
 reset.onclick = function() {
@@ -44,4 +46,6 @@ reset.onclick = function() {
     output.value = "";
 
     error.classList.add("hide");
+
+    password.type = "text";
 }
