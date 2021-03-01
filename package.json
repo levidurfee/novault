@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "deploy": "parcel build src/index.html; wrangler publish"
+    "deploy": "npx parcel build src/index.html; npx wrangler publish"
   },
   "devDependencies": {
     "cssnano": "^4.1.10",
@@ -12,6 +12,8 @@
     "typescript": "^4.1.3"
   },
   "dependencies": {
+    "@cloudflare/wrangler": "^1.13.0",
+    "parcel": "^1.12.4",
     "seedrandom": "^3.0.5"
   }
 }
