@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "deploy": "npx parcel build src/index.html; npx wrangler publish"
+    "build": "npx parcel build src/index.html"
   },
   "devDependencies": {
     "cssnano": "^4.1.10",
