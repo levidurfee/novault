@@ -1,4 +1,4 @@
-import newPassword from './password';
+import generate from 'novaultpw';
 
 const pwlength  = 16;
 const lower   = `abcdefghijklmnopqrstuvwxyz`;
@@ -26,7 +26,7 @@ button.onclick = function() {
     error.innerHTML = "";
     error.classList.add("hide");
 
-    output.value = newPassword(pwlength, chars, pw, re);
+    output.value = generate(pwlength, chars, pw, re);
 
     password.type = "password";
 }
