@@ -1,4 +1,4 @@
-const seedrandom = require('seedrandom');
+import newPassword from './password';
 
 const pwlength  = 16;
 const lower   = `abcdefghijklmnopqrstuvwxyz`;
@@ -26,17 +26,7 @@ button.onclick = function() {
     error.innerHTML = "";
     error.classList.add("hide");
 
-    let rng = seedrandom(pw+re);
-
-    let index = 0;
-    let max = chars.length;
-    let newpw = "";
-    for(let i=0; i<pwlength; i++) {
-        index = Math.floor(rng() * max);
-        newpw += chars[index];
-    }
-
-    output.value = newpw;
+    output.value = newPassword(pwlength, chars, pw, re);
 
     password.type = "password";
 }
