@@ -1,16 +1,16 @@
-const seedrandom = require('seedrandom');
+import generate from 'novaultpw';
 
-const length  = 16;
+const pwlength  = 16;
 const lower   = `abcdefghijklmnopqrstuvwxyz`;
 const upper   = `ABCDEFGHIJKLMNOPQRSTUVWXYZ`;
 const digits  = `1234567890`;
 const special = `~!@#$%^&*_-+=|\\(){}[]:;"'<>,.?/` + "`";
 const chars   = lower+upper+digits+special;
 
-let password = document.getElementById("password");
-let resource = document.getElementById("resource");
+let password = <HTMLInputElement>document.getElementById("password");
+let resource = <HTMLInputElement>document.getElementById("resource");
 let button = document.getElementById("submit");
-let output = document.getElementById("output");
+let output = <HTMLInputElement>document.getElementById("output");
 let error = document.getElementById("error");
 let reset = document.getElementById("reset");
 
@@ -26,16 +26,7 @@ button.onclick = function() {
     error.innerHTML = "";
     error.classList.add("hide");
 
-    let rng = seedrandom(pw+re);
-
-    let max = chars.length;
-    let newpw = "";
-    for(let i=0; i<length; i++) {
-        index = Math.floor(rng() * max);
-        newpw += chars[index];
-    }
-
-    output.value = newpw;
+    output.value = generate(pwlength, chars, pw, re);
 
     password.type = "password";
 }
