@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ block "title" . }}
+        {{ .Site.Title }}
+      {{ end }}</title>
+
+    <link rel="stylesheet" href="/assets/css/output.css">
+
+    <!-- og -->
+    <meta property="og:url"         content="https://novault.pw">
+    <meta property="og:type"        content="website">
+    <meta property="og:title"       content="NoVault Passwords">
+    <meta property="og:description" content="Passwords don't have to be kept in a vault.">
+    <meta property="og:image"       content="https://cdn.wappr.net/files/8347c31e24c7d101206bd25f107b83c2/novault-pw.png">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+</head>
+<body class="antialiased bg-gray-50">
+    <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 mt-6">
+        <div class="max-w-3xl mx-auto">
+            <div class="flex justify-between">
+                <h1 class="font-bold">
+                    <a href="/" class="text-green-600">NoVault Passwords</a>
+                </h1>
+                <div>
+                    <a href="/" class="mr-3 inline-block text-blue-600 hover:bg-blue-600 hover:text-white">Home</a>
+                    <a href="/about" class="text-blue-600 inline-block hover:bg-blue-600 hover:text-white">About</a>
+                </div>
+            </div>
+            <div class="bg-white overflow-hidden shadow sm:rounded-lg">
+                <div class="px-4 py-5 sm:p-6">
+                    {{ block "main" . }}
+                    {{ end }}
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/assets/js/app.js"></script>
+</body>
+</html>

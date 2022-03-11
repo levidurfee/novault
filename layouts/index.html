@@ -1,0 +1,29 @@
+{{ define "main" }}
+
+<div class="isolate -space-y-px rounded-md shadow-sm">
+    <div class="relative border border-gray-300 rounded-md rounded-b-none px-3 py-2 focus-within:z-10 focus-within:ring-1 focus-within:ring-green-600 focus-within:border-green-600">
+        <label for="password" class="block text-xs font-medium text-gray-900">Password</label>
+        <input type="password" name="password" id="password" class="block w-full border-0 p-0 text-gray-900 placeholder-gray-500 focus:ring-0 sm:text-sm" placeholder="Your secret password">
+    </div>
+    <div class="relative border border-gray-300 rounded-md rounded-t-none px-3 py-2 focus-within:z-10 focus-within:ring-1 focus-within:ring-green-600 focus-within:border-green-600">
+        <label for="resource" class="block text-xs font-medium text-gray-900">Resource</label>
+        <input type="text" name="resource" id="resource" class="block w-full border-0 p-0 text-gray-900 placeholder-gray-500 focus:ring-0 sm:text-sm" placeholder="yahoo.com">
+    </div>
+</div>
+<div class="pt-5">
+    <div class="flex justify-end">
+        <button id="reset" type="button" class="bg-white py-2 px-4 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500">Reset</button>
+        <button id="submit" type="submit" class="ml-3 inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500">Generate</button>
+    </div>
+</div>
+
+<div class="pt-5">
+    <div class="relative border border-gray-300 rounded-md px-3 py-2 focus-within:z-10 focus-within:ring-1 focus-within:ring-green-600 focus-within:border-green-600">
+        <label for="resource_password" class="block text-xs font-medium text-gray-900">Resource Password</label>
+        <input readonly type="text" name="resource_password" id="resource_password" class="block w-full border-0 p-0 text-gray-900 placeholder-gray-500 focus:ring-0 sm:text-sm" placeholder="">
+    </div>
+</div>
+
+<div id="error"></div>
+
+{{ end }}
