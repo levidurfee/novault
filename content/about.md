@@ -1,3 +1,7 @@
+---
+title: About
+---
+
 NoVault is a password utility that derives new unique passwords on the
 fly. Your team can use the same password for different resources. A
 resource can be a domain (example.com) or any string value. This
