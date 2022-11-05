@@ -14,4 +14,4 @@ NoVault might not meet all of those requirements. This
 doesn't mean the generated password is insecure. You may
 need to devise a convention to handle these cases.
 
-All of the code is opensource and can be found on <a href="https://github.com/levidurfee/novault/" target="_BLANK">GitHub</a>.
+All of the code is opensource and can be found on [GitHub](https://github.com/levidurfee/novault).
